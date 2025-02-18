@@ -1,0 +1,14 @@
+<form [formGroup]="setupForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="apiKey">OpenIa API key</label>
+    <input 
+      type="password"
+      id="apiKey"
+      formControlName="apiKey"
+      placeholder="Ingresa tú API key de OpenAI">
+  </fieldset>
+  
+  <button type="submit" [disabled]="setupForm.invalid">
+    Guardar API Key y conectar
+  </button>
+</form>
